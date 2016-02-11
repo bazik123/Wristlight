@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Wristlight" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aYI-5o-jkJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iCj-9w-vn3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a6g-4r-n8j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigBulb" translatesAutoresizingMaskIntoConstraints="NO" id="LpQ-kt-BEA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-2A-RLn">
+                                <rect key="frame" x="150" y="538" width="300" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Pqn-T4-Y8g"/>
+                                    <constraint firstAttribute="height" constant="42" id="gSM-Kw-izc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Turn Phone Flashlight On">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleFlashlight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8y-pY-9R8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="JCF-bH-cMz">
+                                <rect key="frame" x="150" y="159" width="300" height="329"/>
+                                <string key="text">Wristlight gives you a simple flashlight app with a glance and complicationfor for your watch.  When your watch's screen turns off when using Wristlight just press the digital crown to reactivate the flashlight.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <string key="userLabel">Wristlight gives you a simple flashlight app and a flashlight glance for your watch.  When your watch's screen turns off when using Wristlight just press the digital crown to reactivate the flashlight.</string>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Wa-2A-RLn" firstAttribute="top" secondItem="JCF-bH-cMz" secondAttribute="bottom" constant="50" id="09L-5J-Plv"/>
+                            <constraint firstItem="LpQ-kt-BEA" firstAttribute="centerY" secondItem="a6g-4r-n8j" secondAttribute="centerY" id="3WI-3P-5I2"/>
+                            <constraint firstItem="LpQ-kt-BEA" firstAttribute="width" secondItem="a6g-4r-n8j" secondAttribute="width" id="VBs-ff-Sta"/>
+                            <constraint firstItem="JCF-bH-cMz" firstAttribute="centerX" secondItem="a6g-4r-n8j" secondAttribute="centerX" id="YcN-Si-QHn"/>
+                            <constraint firstItem="JCF-bH-cMz" firstAttribute="width" secondItem="7Wa-2A-RLn" secondAttribute="width" id="Zem-4D-Q4e"/>
+                            <constraint firstItem="iCj-9w-vn3" firstAttribute="top" secondItem="7Wa-2A-RLn" secondAttribute="bottom" constant="20" id="fSe-Bx-5rs"/>
+                            <constraint firstItem="JCF-bH-cMz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aYI-5o-jkJ" secondAttribute="bottom" constant="50" id="gfv-uI-OTW"/>
+                            <constraint firstItem="7Wa-2A-RLn" firstAttribute="centerX" secondItem="a6g-4r-n8j" secondAttribute="centerX" id="iMr-Fh-SqW"/>
+                            <constraint firstItem="LpQ-kt-BEA" firstAttribute="centerX" secondItem="a6g-4r-n8j" secondAttribute="centerX" id="k9V-om-sWm"/>
+                            <constraint firstItem="LpQ-kt-BEA" firstAttribute="height" secondItem="a6g-4r-n8j" secondAttribute="height" id="sEJ-Ht-AYm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flashButton" destination="7Wa-2A-RLn" id="1UB-QA-ZiU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BigBulb" width="196" height="196"/>
+    </resources>
+</document>
